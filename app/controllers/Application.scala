@@ -5,6 +5,9 @@ import play.api._
 import play.api.mvc._
 import play.api.Play.current
 import fly.play.s3._
+import com.google.common.io.Files
+import scala.concurrent.Await
+import scala.concurrent.duration._
 
 
 class Application extends Controller {
@@ -15,7 +18,7 @@ class Application extends Controller {
   	}
 
   	def s3Upload = Action {
-		Ok(s3())
+		Ok(views.html.s3())
 	}
 
 	def submitS3Upload = Action(parse.multipartFormData) {

@@ -11,7 +11,8 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   specs2 % Test,
-  "net.kaliber" %% "play-s3" % "7.0.2"
+  "net.kaliber"      %% "play-s3"  % "7.0.2",
+  "com.google.guava"  % "guava-io" % "r03"
 )
 
 resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
